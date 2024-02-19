@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - devcard2.0
+      - main
   schedule:
     - cron: "0 0 * * *"
 jobs:
@@ -13,7 +13,7 @@ jobs:
       contents: write
     steps:
       - name: devcard
-        uses: dailydotdev/action-devcard@devcard2.0
+        uses: dailydotdev/action-devcard@3.0.0
         with:
           user_id: ${{ secrets.USER_ID }}
           commit_message: "chore: update ${filename}"
